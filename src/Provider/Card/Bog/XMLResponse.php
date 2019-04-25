@@ -52,8 +52,8 @@ class XMLResponse extends AbstractXMLResponse
     </result>
     <merchant-trx>{$trx_id}</merchant-trx>
     <purchase>
-        <shortDesc>{$short_desc}<shortDesc>
-        <longDesc>{$long_desc}<longDesc>
+        <shortDesc>{$short_desc}</shortDesc>
+        <longDesc>{$long_desc}</longDesc>
         <account-amount>
             <id>{$account_id}</id>
             <amount>{$amount}</amount>
