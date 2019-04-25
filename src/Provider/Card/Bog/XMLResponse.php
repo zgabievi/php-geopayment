@@ -44,28 +44,20 @@ class XMLResponse extends AbstractXMLResponse
         $currency   = $this->clean($data['currency']);
 
         $content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
 <payment-avail-response>
     <result>
-        <code>1</code>  <!-- Result code -->
+        <code>1</code>
         <desc>OK</desc>
     </result>
-    <!-- Merchant transaction id -->
     <merchant-trx>{$trx_id}</merchant-trx>
     <purchase>
-        <!-- Purchase short desctiption. max 30 char -->
-        <shortDesc>{$short_desc}</shortDesc>
-        <!-- Purchase long desctiption. max 125 char -->
-        <longDesc>{$long_desc}</longDesc>
-
-        <!-- Account id list -->
+        <shortDesc>{$short_desc}<shortDesc>
+        <longDesc>{$long_desc}<longDesc>
         <account-amount>
-            <!-- Account id -->
             <id>{$account_id}</id>
-            <!-- Amount in cents -->
             <amount>{$amount}</amount>
-            <!-- Currency code (ISO 4217)-->
             <currency>{$currency}</currency>
-            <!-- Currency exponent (ISO 4217)-->
             <exponent>2</exponent>
         </account-amount>
     </purchase>
@@ -80,6 +72,7 @@ XML;
         $desc = $this->clean($desc, 125);
 
         $content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
 <payment-avail-response>
     <result>
         <code>2</code>
@@ -93,9 +86,10 @@ XML;
     protected function getRegSuccessBody($data)
     {
         $content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
 <register-payment-response>
     <result>
-        <code>1</code> <!-- Result code -->
+        <code>1</code>
         <desc>OK</desc>
     </result>
 </register-payment-response>
@@ -109,9 +103,10 @@ XML;
         $desc = $this->clean($desc, 125);
 
         $content = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
 <register-payment-response>
     <result>
-        <code>2</code> <!-- Result code -->
+        <code>2</code>
         <desc>{$desc}</desc>
     </result>
 </register-payment-response>
