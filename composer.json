@@ -2,7 +2,20 @@
     "name": "zgabievi/geopayment",
     "type": "library",
     "description": "PHP library for working with Georgian payment providers and banks",
-    "keywords": ["payment", "pay", "georgia", "bog", "tbc", "cartu", "merchant", "visa", "ecommerce", "tbcpay", "libertypay", "terminal"],
+    "keywords": [
+        "payment",
+        "pay",
+        "georgia",
+        "bog",
+        "tbc",
+        "cartu",
+        "merchant",
+        "visa",
+        "ecommerce",
+        "tbcpay",
+        "libertypay",
+        "terminal"
+    ],
     "license": "MIT",
     "homepage": "https://github.com/akalongman/php-geopayment",
     "support": {
@@ -19,11 +32,11 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "monolog/monolog": "~1.17",
-        "symfony/var-dumper": "~4.0",
+        "monolog/monolog": "~1.17|~2.0",
+        "symfony/var-dumper": "~3.0|~4.0",
         "vlucas/phpdotenv": "~2.2",
-        "symfony/http-foundation": "~4.0",
-        "nesbot/carbon": "~1.21",
+        "symfony/http-foundation": "~3.0|~4.0",
+        "nesbot/carbon": "^2.0.0",
         "longman/ip-tools": "~1.1"
     },
     "require-dev": {
