@@ -212,7 +212,7 @@ class Payment
 
         $folder = dirname($path);
         $file   = pathinfo($path, PATHINFO_BASENAME);
-        $dotenv = new Dotenv($folder, $file);
+        $dotenv = Dotenv::create($folder, $file);
         $dotenv->load();
         return $this;
     }
