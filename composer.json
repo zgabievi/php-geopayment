@@ -1,58 +1,58 @@
 {
-    "name": "zgabievi/geopayment",
-    "type": "library",
-    "description": "PHP library for working with Georgian payment providers and banks",
-    "keywords": [
-        "payment",
-        "pay",
-        "georgia",
-        "bog",
-        "tbc",
-        "cartu",
-        "merchant",
-        "visa",
-        "ecommerce",
-        "tbcpay",
-        "libertypay",
-        "terminal"
-    ],
-    "license": "MIT",
-    "homepage": "https://github.com/akalongman/php-geopayment",
-    "support": {
-        "issues": "https://github.com/akalongman/php-geopayment/issues",
-        "source": "https://github.com/akalongman/php-geopayment"
-    },
-    "authors": [
-        {
-            "name": "Avtandil Kikabidze aka LONGMAN",
-            "email": "akalongman@gmail.com",
-            "homepage": "http://longman.me",
-            "role": "Maintainer, Developer"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "monolog/monolog": "~1.17|~2.0",
-        "symfony/var-dumper": "~3.0|~4.0",
-        "vlucas/phpdotenv": "~2.2",
-        "symfony/http-foundation": "~3.0|~4.0",
-        "nesbot/carbon": "^2.0.0",
-        "longman/ip-tools": "~1.1"
-    },
-    "require-dev": {
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "2.4.*",
-        "squizlabs/php_codesniffer": "2.5.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Longman\\GeoPayment\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
+  "name": "zgabievi/geopayment",
+  "type": "library",
+  "description": "PHP library for working with Georgian payment providers and banks",
+  "keywords": [
+    "payment",
+    "pay",
+    "georgia",
+    "bog",
+    "tbc",
+    "cartu",
+    "merchant",
+    "visa",
+    "ecommerce",
+    "tbcpay",
+    "libertypay",
+    "terminal"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/akalongman/php-geopayment",
+  "support": {
+    "issues": "https://github.com/akalongman/php-geopayment/issues",
+    "source": "https://github.com/akalongman/php-geopayment"
+  },
+  "authors": [
+    {
+      "name": "Avtandil Kikabidze aka LONGMAN",
+      "email": "akalongman@gmail.com",
+      "homepage": "http://longman.me",
+      "role": "Maintainer, Developer"
     }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "monolog/monolog": "~1.17|~2.0",
+    "symfony/var-dumper": "~3.0|~4.0",
+    "vlucas/phpdotenv": "~2.2|~3.6",
+    "symfony/http-foundation": "~3.0|~4.0",
+    "nesbot/carbon": "^2.0.0",
+    "longman/ip-tools": "~1.1"
+  },
+  "require-dev": {
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~4.0",
+    "phpspec/phpspec": "2.4.*",
+    "squizlabs/php_codesniffer": "2.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Longman\\GeoPayment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
 }
