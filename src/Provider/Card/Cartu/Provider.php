@@ -114,15 +114,12 @@ class Provider extends AbstractProvider
     {
         $gateway = $this->options->get('payment_url', self::DEF_PAYMENT_URL);
 
-        $gateway .= '?CountryCode=' . $this->encode($this->options->get('CountryCode', self::DEF_LANG));
-
-        $gateway .= '&CurrencyCode=' . $this->encode($this->options->get('CurrencyCode', self::DEF_CURRENCY));
-
+        $gateway .= '?CountryCode=' . $this->encode($this->options->get('CountryCode'));
         $gateway .= '&MerchantName=' . $this->encode($this->options->get('MerchantName'));
         $gateway .= '&MerchantURL=' . $this->encode($this->options->get('MerchantURL'));
         $gateway .= '&MerchantCity=' . $this->encode($this->options->get('MerchantCity'));
         $gateway .= '&MerchantID=' . $this->encode($this->options->get('MerchantID'));
-        $gateway .= '&xDDDSProxy.Language=' . $this->encode($this->options->get('xDDDSProxy.Language'));
+        $gateway .= '&xDDDSProxy.Language=' . $this->encode($this->options->get('xDDDSProxy.Language', self::DEF_LANG));
 
         foreach ($this->params as $key => $value) {
             $gateway .= '&' . $key . '=' . $this->encode($value);
